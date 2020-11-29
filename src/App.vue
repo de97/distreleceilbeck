@@ -3,7 +3,7 @@
     <section>
     <VueSlickCarousel :arrows="true" :dots="true">
       <div>1</div>
-      
+      <div>2</div>
     </VueSlickCarousel>
     </section>
      <!-- <li v-for="product in products.carouselData" :key="product.code">
