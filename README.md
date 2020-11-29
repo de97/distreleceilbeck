@@ -24,7 +24,6 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-
 #Distrelec Technical Test - Front End Engineer
 
 ##Constuct An Improved Version Of A Carousel Component 

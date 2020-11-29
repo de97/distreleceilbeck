@@ -10,7 +10,6 @@
       {{product.name}}
     </li> -->
   </div>
-  
 </template>
 
 <script>
