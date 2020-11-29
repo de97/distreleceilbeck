@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section>
+    <VueSlickCarousel :arrows="true" :dots="true">
+      <div>1</div>
+      
+    </VueSlickCarousel>
+    </section>
+     <!-- <li v-for="product in products.carouselData" :key="product.code">
+      {{product.name}}
+    </li> -->
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
+import relProdData from "./data.json"
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "MyComponent",
+  components: { VueSlickCarousel },
+  products: relProdData,
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 5;
+}
+.arrows {
+  color: red;
 }
 </style>

@@ -1,0 +1,61 @@
+{
+  "numberOfItems": "10",
+  "carouselData": [
+    {
+      "code": "30027881",
+      "erpCode": "30027881",
+      "typeName": "5805",
+      "name": "Test Probe",
+      "url": "https://www.distrelec.biz/en/test-probe-5805/p/30027881?mainId=17623260",
+      "promotiontext": "",
+      "energyEfficiencyData": "",
+      "productImageAltText": "Image not found",
+      "productImageUrl": "https://www.distrelec.biz/Web/WebShopImages/landscape_medium/1-/01/Keithley-5805-30027881-01.jpg",
+      "itemPositionOneBased": 4,
+      "originalPackSize": "",
+      "salesUnit": "1 Pieces",
+      "showCarouselItemHead": true,
+      "distManufacturer": {
+        "name": "",
+        "brand_logo": {
+          "url": ""
+        }
+      },
+      "promoLabelCompensateClass": "",
+      "activePromotionLabels": [],
+      "price": {
+        "currency": "GBP",
+        "formattedValue": "287.00"
+      },
+      "categories": ""
+    },
+    {
+      "code": "15526496",
+      "erpCode": "15526496",
+      "typeName": "7/0,2MM TYPE 2 WHITE 100M",
+      "name": "Stranded wire, 0.22 mm², white Stranded tin-plated copper wire PVC",
+      "url": "https://www.distrelec.biz/en/stranded-wire-22-mm-white-stranded-tin-plated-copper-wire-pvc-2mm-type-white-100m/p/15526496?mainId=17623260",
+      "promotiontext": "",
+      "energyEfficiencyData": "",
+      "productImageAltText": "Image not found",
+      "productImageUrl": "https://www.distrelec.biz/Web/WebShopImages/landscape_medium/hi/te/wiring_cable_straight_white.jpg",
+      "itemPositionOneBased": 10,
+      "originalPackSize": "",
+      "salesUnit": "Roll of 100 meter",
+      "showCarouselItemHead": true,
+      "distManufacturer": {
+        "name": "",
+        "brand_logo": {
+          "url": ""
+        }
+      },
+      "promoLabelCompensateClass": "",
+      "activePromotionLabels": [],
+      "price": {
+        "currency": "GBP",
+        "formattedValue": "10.90"
+      },
+      "categories": ""
+    }
+  ]
+}
