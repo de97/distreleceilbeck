@@ -1,19 +1,20 @@
 <template>
   <div id="app">
     <section>
-      <VueSlickCarousel :arrows="true" :dots="true">
+      <VueSlickCarousel :dots="true" :slidesToShow=3>
         <div
           class="relproduct"
           v-for="product in products.carouselData"
           :key="product.code"
         >
           <div class="relproduct__content">
+            <img src="product.url">
             <p class="relproduct__name">
               {{ product.name }}
             </p>
             <ul class="relpoduct__list">
-              <li class="relproduct_item">Stock: 3</li>
-              <li class="relproduct_item">Euro 940</li>
+              <li class="relproduct__item">Stock: 3</li>
+              <li class="relproduct__item">Euro 940</li>
             </ul>
             <button class="relproduct__button">Buy now</button>
           </div>
@@ -43,3 +44,4 @@ export default {
 </script>
 
 
+//<span class="relproduct__img"> {{ product.url }}</span>

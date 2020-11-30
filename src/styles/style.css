@@ -1,4 +1,29 @@
-body {
- 
+.relproduct__content {
+  padding: 10px;
+  border-style: solid;
+}
+
+.relproduct__name {
+  font-weight: bold;
+}
+
+.relproduct__item {
+  margin: 0px 20px 20px 0px;
+  background-color: #bababa;
+  padding: 10px;
+  float: left;
+  list-style-type: none;
+}
+
+.relproduct__img {
+  display: block;
+  height: 100px;
+  background: pink;
+  width: 300px;
+}
+
+.relproduct__button {
+  width: 100%;
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */

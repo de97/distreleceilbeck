@@ -1,3 +1,33 @@
-body {
-    background: red;
+.relproduct {
+  &__content {
+    padding: 10px;
+    border-style: solid;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__list {
+    
+  }
+  &__item {
+    margin: 0px 20px 20px 0px;
+    background-color: rgb(186, 186, 186);
+    padding: 10px;
+    float: left;
+    list-style-type: none;
+  }
+
+  &__img {
+    display: block;
+    height: 100px;
+    background: pink;
+    width: 300px;
+  }
+
+  &__button {
+    width: 100%;
+    background-color: green;
+  }
 }
