@@ -1,26 +1,28 @@
 <template>
   <div id="app">
-    <section>
-      <VueSlickCarousel :dots="true" :slidesToShow=3>
+    <container>
+    <h1>Related Products</h1>
+      <VueSlickCarousel :dots="true" :slidesToShow=4 :slidesToScroll=4>
         <div
-          class="relproduct"
+          class="relproduct__id"
           v-for="product in products.carouselData"
           :key="product.code"
         >
           <div class="relproduct__content">
-            <img src="product.url">
+            <!-- <img class=relproduct__img src="https://www.distrelec.biz/Web/WebShopImages/landscape_medium/ho/to/SO-16W-Photo.jpg"> -->
+            <img class=relproduct__img src= ${product.productImageUrl}>
             <p class="relproduct__name">
               {{ product.name }}
             </p>
             <ul class="relpoduct__list">
-              <li class="relproduct__item">Stock: 3</li>
-              <li class="relproduct__item">Euro 940</li>
+              <li class="relproduct__item">Stock {{product.itemPositionOneBased}}</li>
+              <li class="relproduct__item">{{product.price.currency}} {{product.price.formattedValue}}</li>
             </ul>
             <button class="relproduct__button">Buy now</button>
           </div>
         </div>
       </VueSlickCarousel>
-    </section>
+    </container>
   </div>
 </template>
 

@@ -1,10 +1,20 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 .relproduct__content {
-  padding: 10px;
+  padding: 20px;
   border-style: solid;
+  border-width: 1px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  height: 270px;
 }
 
 .relproduct__name {
   font-weight: bold;
+  text-align: center;
+  font-size: 18px;
 }
 
 .relproduct__item {
@@ -13,17 +23,25 @@
   padding: 10px;
   float: left;
   list-style-type: none;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 .relproduct__img {
-  display: block;
   height: 100px;
-  background: pink;
-  width: 300px;
+  background: #d6d6d6;
 }
 
 .relproduct__button {
+  border-radius: 10px;
   width: 100%;
   background-color: green;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+}
+
+.relproduct__button:hover {
+  background-color: lightgreen;
 }
 /*# sourceMappingURL=style.css.map */
