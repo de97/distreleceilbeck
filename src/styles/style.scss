@@ -1,50 +1,67 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: grey;
+}
+.container {
+  padding: 40px;
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+}
+img {
+  width: 60%;
+  height: auto;
+  margin: 10px auto;
 }
 
 .relproduct {
   &__content {
-    padding: 20px;
+    padding: 5px;
     border-style: solid;
     border-width: 1px;
-    margin: 0px 20px;
+    margin: auto 10px;
     border-radius: 10px;
-    height: 270px;
+    height: 320px;
   }
 
   &__name {
     font-weight: bold;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
+    border-radius: 10px;
   }
 
-  &__list {
-  }
   &__item {
-    margin: 0px 20px 20px 0px;
-    background-color: rgb(186, 186, 186);
-    padding: 10px;
+    margin: 20px auto;
     float: left;
     list-style-type: none;
     border-radius: 10px;
     font-size: 14px;
+    text-align: center;
   }
 
-  &__img {
-    height: 100px;
-    background: rgb(214, 214, 214);
-  }
+  // &__img {
+  // }
 
-  &__button {
-    border-radius: 10px;
-    width: 100%;
+  &_link {
+    position: static;
+    display: inline-block;
     background-color: green;
-    border: none;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
     color: white;
-    padding: 6px 10px;
-
+    width: 100%;
     &:hover {
-        background-color:lightgreen;
+      background-color: lightgreen;
     }
   }
 }
+
+
+//vue-slick-carouseldesign
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+
