@@ -4,10 +4,18 @@ body {
 }
 
 .container {
-  padding: 40px;
-  width: 80%;
+  padding: 5px 40px 40px 40px;
+  width: 50%;
   margin: 20px auto;
   background-color: white;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+bold {
+  font-weight: bold;
 }
 
 img {
@@ -17,47 +25,56 @@ img {
 }
 
 .relproduct__content {
-  padding: 5px;
-  border-style: solid;
-  border-width: 1px;
   margin: auto 10px;
-  border-radius: 10px;
-  height: 320px;
+  height: 250px;
+  overflow: hidden;
 }
 
 .relproduct__name {
+  position: relative;
   font-weight: bold;
   text-align: center;
-  font-size: 20px;
-  border-radius: 10px;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.relproduct__list {
+  margin: 0;
 }
 
 .relproduct__item {
-  margin: 20px auto;
-  float: left;
+  position: relative;
+  top: 15px;
+  margin-top: 10px;
   list-style-type: none;
-  border-radius: 10px;
-  font-size: 14px;
-  text-align: center;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .relproduct_link {
-  position: static;
-  display: inline-block;
-  background-color: green;
-  padding: 10px 0px;
+  font-size: 13px;
+  position: relative;
+  top: 32px;
+  background-color: #68c143;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
   color: white;
-  width: 100%;
+  white-space: nowrap;
 }
 
 .relproduct_link:hover {
-  background-color: lightgreen;
+  background-color: #1c430b;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   color: black;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
 }
 /*# sourceMappingURL=style.css.map */

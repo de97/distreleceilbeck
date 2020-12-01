@@ -1,14 +1,44 @@
+//Colors
+$colors: (
+  primary: rgb(102, 87, 87),
+  button: #68c143,
+  buttontext: white,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 1500px;
+
+//mixins
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: grey;
 }
+
 .container {
-  padding: 40px;
-  width: 80%;
+  padding: 5px 40px 40px 40px;
+  width: 50%;
   margin: 20px auto;
   background-color: white;
 }
-img {
+
+h1 {
+  font-size: 22px;
+}
+
+bold {
+  font-weight: bold;
+}
+
+img  {
   width: 60%;
   height: auto;
   margin: 10px auto;
@@ -16,52 +46,60 @@ img {
 
 .relproduct {
   &__content {
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
     margin: auto 10px;
-    border-radius: 10px;
-    height: 320px;
+    height: 250px;
+    overflow: hidden;
   }
 
   &__name {
+    position: relative;
     font-weight: bold;
     text-align: center;
-    font-size: 20px;
-    border-radius: 10px;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+
+  //   @include desktop {
+  //     font-size: 10px;
+  //   }
+  }
+
+  &__list {
+    margin: 0;
   }
 
   &__item {
-    margin: 20px auto;
-    float: left;
+    position: relative;
+    top: 15px;
+    margin-top: 10px;
     list-style-type: none;
-    border-radius: 10px;
-    font-size: 14px;
-    text-align: center;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
-  // &__img {
-  // }
-
   &_link {
-    position: static;
-    display: inline-block;
-    background-color: green;
-    padding: 10px 0px;
+    font-size: 13px;
+    position: relative;
+    top: 32px;
+    background-color: color(button);
+    padding: 6px 10px;
     text-align: center;
     text-decoration: none;
-    border-radius: 10px;
+
     color: white;
-    width: 100%;
+    white-space: nowrap;
     &:hover {
-      background-color: lightgreen;
+      background-color: #1c430b;
     }
   }
 }
-
-
-//vue-slick-carouseldesign
-.slick-prev:before, .slick-next:before {
+// overrided styling on vue-slick-carousel
+.slick-prev:before,
+.slick-next:before {
   color: black;
 }
 
+.slick-dots li button:before {
+  font-size: 10px;
+}

@@ -1,3 +1,4 @@
+<!--- Important! please intsall the vue-slick-carousel pacakge for this file to run --->
 <template>
   <div id="app">
     <div class="container">
@@ -17,14 +18,17 @@
             <p class="relproduct__name">
               {{ product.name }}
             </p>
-            <ul class="relpoduct__list">
-              <li class="relproduct__item">
-                Stock {{ product.itemPositionOneBased }}
-              </li>
-              <li class="relproduct__item">
-                {{ product.price.currency }} {{ product.price.formattedValue }}
-              </li>
-            </ul>
+
+            <li class="relproduct__item">
+              Stock: {{ product.itemPositionOneBased }}
+            </li>
+            <li class="relproduct__item">
+              <bold
+                >{{ product.price.currency }}:
+                {{ product.price.formattedValue }}</bold
+              >
+            </li>
+
             <a class="relproduct_link" :href="product.url">Buy Now</a>
           </div>
         </div>
@@ -52,14 +56,17 @@ export default {
         dots: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-       
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnDotsHover: true,
+        pauseOnFocus: true,
+        pauseOnHover: true,
         responsive: [
           {
             breakpoint: 1000,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              
             },
           },
           {
@@ -74,10 +81,9 @@ export default {
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              dots: false
-            }
-          }
-
+              dots: false,
+            },
+          },
         ],
       },
     };
