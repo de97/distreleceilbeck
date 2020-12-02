@@ -1,4 +1,4 @@
-<!--- Important! please intsall the vue-slick-carousel pacakge for this file to run --->
+<!--- Important! please intsall the vue-slick-carousel pacakge for this project to run: https://www.npmjs.com/package/vue-slick-carousel --->
 <template>
   <div id="app">
     <div class="container">
@@ -10,25 +10,27 @@
           :key="product.code"
         >
           <div class="relproduct__content">
+            
             <img
               class="relproduct__image"
               style="max-width: 20%"
               :src="product.productImageUrl"
             />
-            <p class="relproduct__name">
-              {{ product.name }}
-            </p>
-
+            <div class="relproduct__container">
+              <p class="relproduct__name">
+                {{ product.name }}
+              </p>
+            </div>
             <li class="relproduct__item">
               Stock: {{ product.itemPositionOneBased }}
             </li>
             <li class="relproduct__item">
-              <bold
-                >{{ product.price.currency }}:
-                {{ product.price.formattedValue }}</bold
+              <span class="bold__text"
+                >{{ product.price.currency }}: £{{
+                  product.price.formattedValue
+                }}</span
               >
             </li>
-
             <a class="relproduct_link" :href="product.url">Buy Now</a>
           </div>
         </div>
@@ -51,6 +53,7 @@ export default {
   data() {
     return {
       products: relProdData,
+      //Settings for View-slick-carousel
       settings: {
         arrows: true,
         dots: true,

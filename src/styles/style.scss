@@ -1,44 +1,53 @@
-//Colors
+//I have used the live sass compiler in visual studio code to compile SCSS file into css
 $colors: (
-  primary: rgb(102, 87, 87),
-  button: #68c143,
-  buttontext: white,
+  primary: #fff,
+  body: grey,
+  link: #68c143,
+  linktext: white,
+  linkhover: #1c430b,
 );
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
-$desktop: 1500px;
-
-//mixins
-@mixin desktop {
-  @media (max-width: #{$desktop}) {
-    @content;
-  }
+@mixin linkLayout(
+  $fontsize,
+  $fontcolor,
+  $backgroundcolor,
+  $padding,
+  $align,
+  $decoration
+) {
+  font-size: $fontsize;
+  color: $fontcolor;
+  background-color: $backgroundcolor;
+  padding: $padding;
+  text-align: $align;
+  text-decoration: $decoration;
 }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: grey;
+  background-color: color(body);
 }
 
 .container {
   padding: 5px 40px 40px 40px;
   width: 50%;
   margin: 20px auto;
-  background-color: white;
+  background-color: color(primary);
 }
 
 h1 {
   font-size: 22px;
 }
 
-bold {
+.bold__text {
   font-weight: bold;
 }
 
-img  {
+img.relproduct__image {
   width: 60%;
   height: auto;
   margin: 10px auto;
@@ -51,17 +60,16 @@ img  {
     overflow: hidden;
   }
 
+  &__container {
+    height: 65px;
+    overflow: hidden;
+  }
+
   &__name {
     position: relative;
+    top: 0;
     font-weight: bold;
-    text-align: center;
     font-size: 15px;
-    overflow: hidden;
-    white-space: nowrap;
-
-  //   @include desktop {
-  //     font-size: 10px;
-  //   }
   }
 
   &__list {
@@ -70,7 +78,7 @@ img  {
 
   &__item {
     position: relative;
-    top: 15px;
+    top: 10px;
     margin-top: 10px;
     list-style-type: none;
     font-size: 13px;
@@ -79,18 +87,21 @@ img  {
   }
 
   &_link {
-    font-size: 13px;
+    //fontsize, fontcolor, backgroundcolor, padding, text align, text decoration
+    @include linkLayout(
+      13px,
+      color(linktext),
+      color(link),
+      6px 10px,
+      center,
+      none
+    );
     position: relative;
     top: 32px;
-    background-color: color(button);
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
     white-space: nowrap;
+
     &:hover {
-      background-color: #1c430b;
+      background-color: color(linkhover);
     }
   }
 }
